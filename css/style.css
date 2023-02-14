@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
 body {
     height: 100vh;
     width: 100vw;
     background-color: #0C0B0B;
     margin: 0rem;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   
   #image-track {
@@ -27,8 +29,8 @@ body {
 
 h1 {
   color: #8c8381;
-  font-size: 0.9rem;
-  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
 }
 
 h1:hover {
@@ -38,19 +40,66 @@ h1:hover {
 
 h2 {
   color: #696260;
-  font-size: 0.8rem;
-  font-family: 'Rubik', sans-serif;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+h3 {
+  color: #aaa19f;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease-in-out;
+  font-weight: 300;
+}
+
+h3:hover {
+  color: #887c70;
+}
+
+h3:active {
+  transform: translateY(-10px);
+}
+
+h4 {
+  color: #cec7c5;
+  font-family: 'Inter', sans-serif;
+  font-size: 35px;
+}
+
+h5 {
+  color: #aaa19f;
+  font-family: 'Inter', sans-serif;
+}
+
+h6 {
+  color: #aaa19f;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+}
+
+p {
+  color: #aaa19f;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+mark {
+  color: #c0bab8;
+  background-color: #344242;
 }
 
 /* footer styling */
 
 footer{
-  position: sticky;
-  top: 93%;
+  position: fixed;
+  bottom: 0;
   color: #696260;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+  margin: 0 10%;
+  bottom: 5%;
 }
 
 /* arrow */
@@ -97,6 +146,26 @@ footer{
   }
 }
 
+/* image track */
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 57%;
+  top: 50%;
+  transform: translate(0%, -50%); 
+  user-select: none; /* -- Prevent image highlighting -- */
+  z-index: 9999;
+}
+  
+#image-track a .image {
+  width: 30vmin;
+  height: 42vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
 /* header style */
 
   ul {
@@ -132,16 +201,16 @@ footer{
   }
   
   .nav {
-    position: sticky;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     top: 5%;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 10%;
   }
 
-  /* hover effect */
+/* hover effect */
 
 
 .li.label::after{
@@ -180,4 +249,26 @@ footer {
 
 }
 
-/* hover project content */
+/* project content */
+
+.column {
+	float: left; 
+	width: 45%;
+	margin-right: 5%;
+}
+
+
+.container {
+  width: 55%;
+  position: relative;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 5% 0 0;
+  align-items: center;
+  height:100vh;
+}
+
+.container img {
+  width: 100%;
+}
