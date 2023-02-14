@@ -31,6 +31,7 @@ h1 {
   color: #8c8381;
   font-size: 14px;
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
 }
 
 h1:hover {
@@ -42,6 +43,7 @@ h2 {
   color: #696260;
   font-size: 12px;
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
 }
 
 h3 {
