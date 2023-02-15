@@ -152,7 +152,7 @@ footer{
 
 #image-track {
   display: flex;
-  gap: 4vmin;
+  gap: 3vmin;
   position: absolute;
   left: 57%;
   top: 50%;
@@ -235,7 +235,7 @@ footer {
     display: none;
   }
 
-  #image-track > .image {
+  #uique, #image-track a .image {
     width: 70vmin;
     height: 98vmin;
   }
