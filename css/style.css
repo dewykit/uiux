@@ -129,7 +129,7 @@ mark {
 @keyframes show-images {
   from {
     transform: translateX(100%);
-    width: 0.5vmin;
+    width: 0vmin;
   }
 
 50% {
@@ -139,13 +139,13 @@ mark {
 
   to {
     transform: translateX(0%);
-    width: 3.7vmin;
+    width: 4vmin;
   }
 }
 
 #image-track {
   display: flex;
-  gap: 0.6vmin;
+  gap: 1.2vmin;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -155,10 +155,9 @@ mark {
 }
 
 #image-track a .image {
-  width: 3.7vmin;
+  width: 4vmin;
   height: 38vmin;
   object-fit: cover;
-  object-position: 100% center;
   transition: all 2s ease;
 
   animation: show-images 3s;
@@ -335,7 +334,7 @@ footer {
 
 @keyframes show-images {
   from {
-    width: 1.2vmin;
+    width: 0vmin;
   }
 
   to {
