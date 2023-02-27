@@ -325,7 +325,7 @@ footer {
 }
 
 #image-track a .image {
-  width: 7.4vmin;
+  width: 20vmin;
   height: 76vmin;
 }
 
@@ -338,12 +338,8 @@ footer {
     width: 1.2vmin;
   }
 
-50% {
-  width: 20vmin;
-}
-
   to {
-    width: 7.4vmin;
+    width: 20vmin;
   }
 }
 
