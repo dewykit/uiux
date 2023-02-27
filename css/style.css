@@ -306,3 +306,45 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+@media only screen and (max-width: 600px) {
+ ul {
+  display: none;
+ }
+
+ #blob {
+  display: none;
+ }
+
+ #blur {
+  display: none;
+ }
+
+ #image-track {
+  gap: 1.2vmin;
+}
+
+#image-track a .image {
+  width: 7.4vmin;
+  height: 76vmin;
+}
+
+#image-track a .image:hover {
+  width: 50vmin;
+}
+
+@keyframes show-images {
+  from {
+    width: 1.2vmin;
+  }
+
+50% {
+  width: 20vmin;
+}
+
+  to {
+    width: 7.4vmin;
+  }
+}
+
+}
