@@ -3,26 +3,48 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: #0C0B0B;
+    background-color: #0c0c0c;
     margin: 0rem;
     overflow-x: hidden;
   }
-  
-  #image-track {
-    display: flex;
-    gap: 4vmin;
-    position: absolute;
-    left: 57%;
-    top: 50%;
-    transform: translate(0%, -50%); 
-    user-select: none; /* -- Prevent image highlighting -- */
+
+  /* mouse cursor */
+
+  @keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    
+    50% {
+      scale: 1 1.5;
+    }
+    
+    to {
+      rotate: 360deg;
+    }
   }
   
-  #image-track > .image {
-    width: 30vmin;
-    height: 42vmin;
-    object-fit: cover;
-    object-position: 100% center;
+  #blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, powderblue, pink);
+    animation: rotate 20s infinite;
+    opacity: 0.5;
+    z-index: -200;
+  }
+  
+  #blur {
+    height: 500%;
+    width: 500%;
+    position: absolute;
+    z-index: -100;
+    backdrop-filter: blur(12vmax);
   }
 
 /* brand */
@@ -69,8 +91,10 @@ h4 {
 }
 
 h5 {
-  color: #aaa19f;
+  color: #ada5a3;
   font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 100;
 }
 
 h6 {
@@ -91,165 +115,160 @@ mark {
   background-color: #344242;
 }
 
+.external-link {
+  text-decoration: none;
+}
+
 /* footer styling */
 
-footer{
-  position: fixed;
-  bottom: 0;
-  color: #696260;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-  margin: 0 10%;
-  bottom: 5%;
-}
 
 /* arrow */
-.arrow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform: rotate(-90deg);
-  cursor: pointer;
-}
-
-.arrow span {
-  display: block;
-  width: 1.0vw;
-  height: 1.0vw;
-  border-bottom: 2px solid #696260;
-  border-right: 2px solid #696260;
-  transform: rotate(45deg);
-  margin: -10px;
-  animation: animate 5s;
-  animation-fill-mode: forwards;
-}
-
-.arrow span:nth-child(2) {
-  animation-delay: -0.2s;
-}
-
-.arrow span:nth-child(3) {
-  animation-delay: -0.4s;
-}
-
-@keyframes animate {
-  0% {
-      opacity: 0;
-      transform: rotate(45deg) translate(-20px, -20px);
-  }
-  50% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-      transform: rotate(45deg) translate(20px, 20px);
-  }
-}
 
 /* image track */
 
+@keyframes show-images {
+  from {
+    transform: translateX(100%);
+    width: 0.5vmin;
+  }
+
+50% {
+  transform: translateX(50%);
+  width: 20vmin;
+}
+
+  to {
+    transform: translateX(0%);
+    width: 3.7vmin;
+  }
+}
+
 #image-track {
   display: flex;
-  gap: 3vmin;
+  gap: 0.6vmin;
   position: absolute;
-  left: 57%;
+  left: 50%;
   top: 50%;
-  transform: translate(0%, -50%); 
+  transform: translate(-50%, -50%); 
   user-select: none; /* -- Prevent image highlighting -- */
-  z-index: 9999;
+  z-index: 8888;
 }
-  
+
 #image-track a .image {
-  width: 30vmin;
-  height: 42vmin;
+  width: 3.7vmin;
+  height: 38vmin;
   object-fit: cover;
   object-position: 100% center;
+  transition: all 2s ease;
+
+  animation: show-images 3s;
 }
+
+#image-track a .image:hover {
+    object-position: 0 center;
+  width: 50vmin;
+}
+
+
 
 /* header style */
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  li {
-    margin-left: 3rem;
-    color: #696260;
-  }
-
-  .nav__title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    line-height: 0.5rem;
-    color: #696260;
-  }
-
-  .nav__item {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    line-height: 0.5rem;
-  }
-  
-  .site-title {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-  }
-  
-  .nav {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 5%;
-    width: 80%;
-    margin: 0 10%;
-  }
-
-/* hover effect */
-
-
-.li.label::after{
-    content:'Contact';
-}
-.li.label:hover::after{
-    content:'lilymseo@gmail.com';
+nav {
+  z-index: 3;
 }
 
-li.scale:hover, li.scale:active {font-size: 150%;}
-
-/* mobile friendly */
-@media only screen and (max-width: 481px) {
-
-footer {
-  display: none;
+.fa {
+  color: #bbb3b1;
 }
 
-  .nav__item {
-    display: none;
-  }
+ul {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  z-index: 5;
 
-  #uique, #image-track a .image {
-    width: 70vmin;
-    height: 98vmin;
-  }
+  font-size: 15px;
 
-.arrow {
-  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translateY(-50%);
 }
 
-.nav {
-  top: 1%;
-  overflow: hidden;
+ul li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 60px;
+  height: 45px;
+  border-radius: 60px;
+  background-color: transparent;
+  transition: 0.6s;
+  cursor: pointer;
+  z-index: 3;
 }
 
+ul li:hover {
+  width: 180px;
 }
+
+ul li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  border-radius: 60px;
+  transition: 0.5s;
+  background: linear-gradient(45deg, var(--i), var(--j));
+}
+
+ul li:hover::before {
+  opacity: 1;
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  opacity: 0;
+  transition: 0.5s;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  filter: blur(15px);
+  z-index: 3;
+}
+
+ul li:hover::after {
+  opacity: 0.5;
+}
+
+ul li span {
+  position: absolute;
+}
+
+ul li .title {
+  color: #f6f6ea;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  transform: scale(0);
+  transition: 0.3s;
+  transition-delay: 0s;
+}
+
+ul li:hover .title {
+  transform: scale(1);
+  transition-delay: 0.25s;
+}
+
 
 /* project content */
 
@@ -272,5 +291,18 @@ footer {
 }
 
 .container img {
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
   width: 100%;
 }

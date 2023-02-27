@@ -15,15 +15,6 @@
 
     <title>Lily's portfolio</title>
 
-        <nav class="nav">
-            <div class="nav__title"><h3>LILYSEO</h3></div>
-            <ul class="nav__list">
-                <li class="nav__item">
-                <h1 data-value="lilymseo@gmail.com">My contact details</h1></li>
-            </ul>
-        </nav>
-    </div>
-
 </head>
 
 <style>
@@ -34,38 +25,76 @@ body {
 
 img {
   filter: grayscale(100%);
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
 }
 
-img:hover {
+/* img:hover {
   filter: grayscale(0%);
-  transform: scale(1.1);
-}
+} */
 
 </style>
 
-<body scroll="no">
+<!-- nav bar -->
 
-<div class="arrow">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+<ul>
+  <a href="#landing-page">
+  <li style="--i:#0c0c0c;--j:#0c0c0c;">
+    <i class="fa fa-home" aria-hidden="true"></i>
+    <span class="title">Home</span>
+  </li>
+  </a>
 
-<div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-    <a href="dewykit.html"><img class="image" src="images/banner 1.jpg" draggable="false" /></a>
-    <a href="my-home-assistant.html"><img class="image" src="images/smart-home-screen-panel-monitor-wall.jpg" draggable="false" /></a>
-    <a href="password.html"><img class="image" src="images/sample.gif" draggable="false" /></a>
-    <a href="password.html"><img class="image" src="images/Harbourside-Precinct_hero.jpg" draggable="false" /></a>
-</div>
+  <a href="#about">
+    <li style="--i:#0c0c0c;--j:#0c0c0c;">
+      <i class="fa fa-address-book" aria-hidden="true"></i>
+        <span class="title">About me</span>
+    </li>
+  </a>
+    <a href="https://www.lilyseo.net" target="_blank">
+     <li style="--i:#0c0c0c;--j:#0c0c0c;">
+        <i class="fa fa-folder" aria-hidden="true"></i>
+         <span class="title">Architecture archive</span>
+    </li>
+  </a>
+  </ul>
+
+<!-- end of nav bar -->
+
+
+<div id="blob"></div>
+<div id="blur"></div>
+
+      <section id="landing-page">
+        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+          <a href="dewykit.html"><img class="image" src="images/banner 2.jpg" draggable="false" /></a>
+          <a href="my-home-assistant.html"><img class="image" src="images/smart-home-screen-panel-monitor-wall.jpg" draggable="false" /></a>
+          <a href="password.html"><img class="image" src="images/sample.gif" draggable="false" /></a>
+          <a href="password.html"><img class="image" src="images/Harbourside-Precinct_hero.jpg" draggable="false" /></a>
+        </div>
+      </section>
+
+<section id="blank">
+
+</section>
+
+      <section id="about">
+        <div id="blob"></div>
+        <div id="blur"></div>
+
+
+        <p>Hello, thank you for clicking on my Abouts page. I am currently working on this page, so you can get to know me a little bit!</p>
+        </section>
 
 
 <script src="js/main.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://use.fontawesome.com/e7cb172c8c.js"></script>
 
 </body>
 
 <footer>
-        <h2>Created with<br>HTML, CSS and JS</h2>
+
+<!-- <h5>This portfolio was created using HTML, CSS, and JavaScript by Lily Seo.</h5> -->
+
 </footer>
 </html>
