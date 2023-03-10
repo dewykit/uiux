@@ -8,11 +8,8 @@
     <link rel="icon" href="images/Favicon.png">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="css/project.css" /> 
-	<link rel="stylesheet" type="text/css" href="css/style.css" /> 
-    <link rel="stylesheet" type="text/css" href="css/trailer.css" />
-    <link rel="stylesheet" type="text/css" href="css/transition.css" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+	<link rel="stylesheet" type="text/css" href="css/style.css" />   
 
     <title>My Home</title>
 	
@@ -29,50 +26,69 @@
 </head>
 
 <style>
-
+	 .image {
+        background-image: url('images/smart-home-screen-panel-monitor-wall2.jpg');
+        background-size: contain;
+		background-position: center;
+		background-attachment: fixed;
+        width: 70vw;
+        height: 60vh;
+		margin-top: 3%;
+		margin-right: 15%;
+		margin-bottom: 0%;
+		margin-left: 15%;
+      }
 </style>
 
 <body>
 
-   <div class="container">
-	<div class="column">
-	<img src="images/smart-home-screen-panel-monitor-wall.jpg" class="wow fadeInUp" data-wow-delay="0.9s" alt="Banner">
+	<div class="image">
 	</div>
 
-	<div class="column">
-	<h4>Application:<br>My Home</h4>
+	<div class="container">
+		<div class="column">
+			<p style="margin-bottom: 0;">Ecosystem</p>
+			<h5 style="margin-top: 0;">My Home</h5>
+		</div>
 
-	<p><b>Site</b><br>
-	The Bipolar House<br><br>
-	<b>Role</b><br>
-	UX Designer<br><br>
-	<b>Responsibilities</b><br>
-	•&emsp;User research<br>
-	•&emsp;Site research<br>
-	•&emsp;Market research<br>
-	•&emsp;User flows/information architecture<br>
-	</div>
+		<div class="column">
+			<h6 style="margin-bottom: 0;">Site</h6>
+			<p style="margin-top: 0;">The Bipolar House</p>
+			<h6 style="margin-bottom: 0;">Role</h6>
+			<p style="margin-top: 0;">UX designer</p>
+			<h6 style="margin-bottom: 0;">Responsibilities</h6>
+			<p style="margin-top: 0;">•&emsp;User research<br>
+				•&emsp;User research<br>
+				•&emsp;Site research<br>
+				•&emsp;Market research<br>
+				•&emsp;User flows/information architecture</p>
+		</div>
 
-	<br clear=left>
-	<br>
-	<br>
-
-	<h6>Overview</h6>
+<h6 style="margin-bottom: 0;">Overview</h6>
 	<p>
-	Re-imagining Google Home personalised to a specific house, the Bipolar House, in line to the design principal and the way of living promoted by the physical boundaries of architecture.<br><br>
-		The Bipolar House has two modes of cluster and non-cluster/concealment and reveal. The mode of concealment attempts to erase all evidence of the living. 
-		The forensic nature of the house forces a users to closely inspect the details of the house for the house to slowly unravel itself. 
-		Over time, for any user, the relationship to the house/owner will affect how much of the house is allowed for exploration. As an act of social-filter.</p>
-		<br>
-		<br>
+		Re-imagining Google Home personalised to a specific house, the Bipolar House, in line to the design principal and the way of living promoted by the physical boundaries of architecture.</p>
+
+		<h6 style="margin-bottom: 0;">Site Overview</h6>
+		<p>As an open floor plan, there are no physical boundaries separating the programs. 
+		The house offers two definite served and servant spaces to assist in creating programs and rituals that support the living. 
+		The servant spaces - toilets, storage, technical rooms, duct shaft and kitchen uses the momentum created by a single levelled line across the span of the house to protect the services. 
+		The servant areas meant for inhibition allows for all the material, object and occupancy. </p>
 		
-		<h6>Problem Statement</h6>
+		<h6 style="margin-bottom: 0;">Problem Statement</h6>
 		<p>There were no automation system providing a comprehensive solution for ensuring a comfortable living environment. Although, the house was designed in a way to maximise the solar movement and wind direction, <mark>a static design cannot support personalised needs. There required for some control mechanism for the people living and visiting the house. Specifically in regards to lighting, water temperature, air conditioning and air purity.</mark> A home assistance application is needed to address the issue, allowing users to easily control and monitor these factors in order to create a comfortable and healthy living space.</p>
+		
+		<h6 style="margin-bottom: 0;">Solution</h6>
+		<p>Establishing a seamless ecosystem of touchpoints that cater to the user's needs for a comfortable living environment. By carefully analysing each touchpoint and identifying pain points, created custom solutions that enhance the overall experience.</p>
+
 		<br>
 		<br>
-		
-		
-		<h6>Design Process</h6>
+		<button id="see-more-btn">Read more</button>
+		<br>
+		<br>
+		<div id="hidden-content" style="display: none;">
+			
+			
+		<h6 style="margin-bottom: 0;">Design Process</h6>
 		<br>
 		<img src="images/My home/part1.svg" class="img-responsive" alt="Programs diagram">
 		<br>
@@ -322,7 +338,7 @@
 <br>
 <br>
 <br>
-
+</div>
 </div>
 
 
