@@ -16,20 +16,21 @@
 }
 
 .menu {
-  height: 40vh;
-  width: 50px;
+  height: 30vh;
+  width: 100px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
+  align-items: left;
+  position: fixed;
+  margin: 3%;
 
 }
 .menu a {
   color: #000;
   font-family: 'Inter', sans-serif;
-  font-weight: 500;
+  font-weight: 100;
   font-size: 13px;
-  transform: rotate(270deg);
+  /* transform: rotate(270deg); */
   text-decoration: none;
 }
 
@@ -231,7 +232,7 @@ mark {
 
 #landing-page {
   height: 100vh;    
-  
+  margin-top: -10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -248,7 +249,7 @@ body:hover > #trailer {
   background-position: center 50%;
   background-size: 100%;  
   /* opacity: 0.4; */
-  border-radius: 15px;
+  border-radius: 10px;
   transition: background-size 400ms ease, opacity 400ms ease;
   
 }
@@ -287,9 +288,9 @@ html, body {
   overflow-x: hidden;
 }
 
- /* h4 {
+ h4 {
   font-size: 1.3rem;
-} */
+ }
 
 #about {
 /* margin-top: 20vh;
@@ -339,7 +340,7 @@ button#see-more-btn:hover {
 .scroll-indicator {
   width: 40px;
   height: 60px;
-  transform: scale(0.75);
+  transform: scale(0.68);
   border: 2px solid rgba(117, 187, 194, 0.781);
   border-radius: 50px;
   position: relative;
