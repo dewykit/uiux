@@ -25,9 +25,9 @@
 
 }
 .menu a {
-  color: #d1c7c4;
+  color: #000;
   font-family: 'Inter', sans-serif;
-  font-weight: 100;
+  font-weight: 500;
   font-size: 13px;
   transform: rotate(270deg);
   text-decoration: none;
@@ -37,16 +37,39 @@
   text-decoration: none;
 }
 
+.navicon {
+  position: fixed;
+  right: 15%;
+  top: 46px;
+  display: flex;
+  justify-content: flex-end;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-weight: 100;
+  font-size: 13px;
+  max-width: 85%;
+  margin: 0 auto;
+  z-index: 999;
+  left: 0; /* set the left edge of the element to the left edge of the viewport */
+  width: 100vw; /* set the width of the element to 100% of the viewport width */
+}
+
+
+.navicon a {
+  text-decoration: none;
+}
+
 
 .context {
   display: relative;
-  margin: 15%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 body {
   height: auto;
     width: 100vw;
-    background-color: #2b2926;
+    background-color: #fff;
     margin: 0rem;
     overflow-x: hidden;
   }
@@ -60,7 +83,7 @@ body {
 /* font typologies */
 
 h1 {
-  color: #8c8381;
+  color: #000;
   font-size: 14px;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
@@ -72,14 +95,14 @@ h1:hover {
 }
 
 h2 {
-  color: #aaa19f;
+  color: #000;
   font-size: 12px;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
 }
 
 h3 {
-  color: #d1c7c4;
+  color: #000;
   font-family: 'Inter', sans-serif;
   font-weight: 100;
   font-size: 15px;
@@ -89,8 +112,8 @@ h3 {
 /* magic font */
 
 :root {  
-  --purple: rgb(255, 255, 255);
-  --violet: rgb(177, 242, 248);
+  --purple: rgb(114, 105, 187);
+  --violet: rgb(122, 164, 168);
   --pink: rgb(235, 168, 199);
 }
 
@@ -125,7 +148,7 @@ h3 {
 }
 
 h4 {
-  color: #ffffff;
+  color: #000;
   font-family: 'Inter', sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -174,21 +197,21 @@ h4 > .magic > .magic-text {
 }
 
 h5 {
-  color: #ffffff;
+  color: #000;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 25px;
 }
 
 h6 {
-  color: #ffffff;
+  color: #000;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 20px;
 }
 
 p {
-  color: #d1c7c4;
+  color: #000;
   font-family: 'Inter', sans-serif;
   font-weight: 100;
   font-size: 15px;
@@ -196,8 +219,8 @@ p {
 }
 
 mark {
-  color: #ece8e7;
-  background-color: #224944;
+  color: #000;
+  background-color: #d9ff00;
 }
 
 .external-link {
@@ -208,7 +231,6 @@ mark {
 
 #landing-page {
   height: 100vh;    
-  margin: 0px;  
   
   display: flex;
   align-items: center;
@@ -225,14 +247,15 @@ body:hover > #trailer {
   width: 16%;
   background-position: center 50%;
   background-size: 100%;  
-  opacity: 0.4;
-  
+  /* opacity: 0.4; */
+  border-radius: 15px;
   transition: background-size 400ms ease, opacity 400ms ease;
+  
 }
 
 .interactable:hover {
   background-size: 105%;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* project content */
@@ -246,26 +269,31 @@ body:hover > #trailer {
 
 section {
   min-height: 100vh;
-  height: auto;
   width: 100vw;
   position: relative;
-
+  scroll-snap-align: start; /* snap to the start of the section */
+  scroll-margin-top: 1px; /* add a small margin to trigger the snap */
+  scroll-padding-top: 1px; /* add a small padding to avoid cutting off the section content */
 }
 
 @media only screen and (max-width: 800px) {
+
+.navicon {
+  display:none;
+}
 
 html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-h4 {
-  font-size: 1.1rem;
-}
+ /* h4 {
+  font-size: 1.3rem;
+} */
 
 #about {
-margin-top: 20vh;
-margin-bottom: 30vh;
+/* margin-top: 20vh;
+margin-bottom: 30vh; */
 }
 
 #landing-page {
@@ -277,8 +305,15 @@ margin-bottom: 30vh;
   width: 70%;
   aspect-ratio: 16 / 9;
   margin-bottom: 5%;
+
 }
+  .column {
+    width: 100%;
+
+  }
+
 }
+
 
 /* see more button */
 
@@ -300,3 +335,53 @@ button#see-more-btn:hover {
   background-color: #224944;
   color: #fff;
 }
+
+.scroll-indicator {
+  width: 40px;
+  height: 60px;
+  transform: scale(0.75);
+  border: 2px solid rgba(117, 187, 194, 0.781);
+  border-radius: 50px;
+  position: relative;
+  box-shadow: 0px 0px 35px -5px rgba(117, 187, 194, 0.781);
+}
+
+.scroll-indicator::before {
+  content: '';
+  position: absolute;
+  top: .5em;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(117, 187, 194, 0.781);
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  animation: scrollAnim 1.8s .5s infinite ease-in;
+  box-shadow: 0px 0px 35px -5px rgba(117, 187, 194, 0.781);
+}
+
+/* Animation */
+@keyframes scrollAnim {
+  0% {
+    transform: translate(-50%, 0) rotateX(0);
+    opacity: 0;
+  }
+
+  5% {
+    opacity: .5;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  90%,
+  100% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, 30px) rotateX(30deg);
+  }
+}
+/* Animation */
