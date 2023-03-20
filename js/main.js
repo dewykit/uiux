@@ -22,13 +22,3 @@ for(const star of document.getElementsByClassName("magic-star")) {
     setInterval(() => animate(star), 2000);
   }, index++ * (interval / 3))
 }
-
-
-// see more 
-
-const seeMoreBtn = document.getElementById('see-more-btn');
-const hiddenContent = document.getElementById('hidden-content');
-
-seeMoreBtn.addEventListener('click', function() {
-  hiddenContent.style.display = 'block';
-});

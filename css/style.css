@@ -1,47 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
 
-/* ::-webkit-scrollbar {
-  display: none;
-} */
-
-.menu-wrap {
-  margin: 0.4rem;
-  width: 50px;
-  height: 100vh;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 9999;
-}
-
-.menu {
-  height: 30vh;
-  width: 100px;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: left;
-  position: fixed;
-  margin: 3%;
-
-}
-.menu a {
-  color: #000;
-  font-family: 'Inter', sans-serif;
-  font-weight: 100;
-  font-size: 13px;
-  /* transform: rotate(270deg); */
-  text-decoration: none;
-}
-
-.menu a:hover {
-  text-decoration: none;
-}
-
 .navicon {
-  position: fixed;
-  right: 15%;
-  top: 46px;
+  padding-right: 15%;
+  padding-top: 1.5%;
   display: flex;
   justify-content: flex-end;
   color: #000;
@@ -54,7 +16,6 @@
   left: 0; /* set the left edge of the element to the left edge of the viewport */
   width: 100vw; /* set the width of the element to 100% of the viewport width */
 }
-
 
 .navicon a {
   text-decoration: none;
@@ -228,37 +189,6 @@ mark {
   text-decoration: none;
 }
 
-/* project images */
-
-#landing-page {
-  height: 100vh;    
-  margin-top: -10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2%;
-}
-
-body:hover > #trailer {
-  opacity: 1;
-}
-
-.interactable {
-  aspect-ratio: 9 / 16;
-  width: 16%;
-  background-position: center 50%;
-  background-size: 100%;  
-  /* opacity: 0.4; */
-  border-radius: 10px;
-  transition: background-size 400ms ease, opacity 400ms ease;
-  
-}
-
-.interactable:hover {
-  background-size: 105%;
-  opacity: 1;
-}
-
 /* project content */
 
 .column {
@@ -273,8 +203,8 @@ section {
   width: 100vw;
   position: relative;
   scroll-snap-align: start; /* snap to the start of the section */
-  scroll-margin-top: 1px; /* add a small margin to trigger the snap */
-  scroll-padding-top: 1px; /* add a small padding to avoid cutting off the section content */
+  scroll-margin-top: 100px; /* add a small margin to trigger the snap */
+  scroll-padding-top: 100px; /* add a small padding to avoid cutting off the section content */
 }
 
 @media only screen and (max-width: 800px) {
@@ -292,50 +222,14 @@ html, body {
   font-size: 1.3rem;
  }
 
-#about {
-/* margin-top: 20vh;
-margin-bottom: 30vh; */
-}
-
-#landing-page {
-  display: block;
-  margin: 15%;
-}
-
-.interactable {
-  width: 70%;
-  aspect-ratio: 16 / 9;
-  margin-bottom: 5%;
-
-}
   .column {
     width: 100%;
-
   }
 
 }
 
 
-/* see more button */
-
-button#see-more-btn {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 1.5px solid #000;
-  border-radius: 25px;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-button#see-more-btn:hover {
-  background-color: #224944;
-  color: #fff;
-}
+/* scroll indicator */
 
 .scroll-indicator {
   width: 40px;
@@ -361,7 +255,6 @@ button#see-more-btn:hover {
   box-shadow: 0px 0px 35px -5px rgba(117, 187, 194, 0.781);
 }
 
-/* Animation */
 @keyframes scrollAnim {
   0% {
     transform: translate(-50%, 0) rotateX(0);
@@ -385,4 +278,4 @@ button#see-more-btn:hover {
     transform: translate(-50%, 30px) rotateX(30deg);
   }
 }
-/* Animation */
+
