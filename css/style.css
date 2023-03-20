@@ -202,9 +202,6 @@ section {
   min-height: 100vh;
   width: 100vw;
   position: relative;
-  scroll-snap-align: start; /* snap to the start of the section */
-  scroll-margin-top: 100px; /* add a small margin to trigger the snap */
-  scroll-padding-top: 100px; /* add a small padding to avoid cutting off the section content */
 }
 
 @media only screen and (max-width: 800px) {

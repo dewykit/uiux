@@ -10,7 +10,7 @@
     display: grid;
     align-content: center;
     justify-content: center;
-    transform: translateY(-15%);
+    transform: translateY(-13%);
 }
   
 .gallery__card{
@@ -178,10 +178,6 @@
     .gallery__card{
         width: 300px;
         height: 450px;
-    }
-
-    .gallery{
-        transform: translateY(-20%);
     }
 
     .gallery-cards,
