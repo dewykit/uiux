@@ -6,7 +6,6 @@
   padding-top: 1.5%;
   display: flex;
   justify-content: flex-end;
-  color: #000;
   font-family: 'Inter', sans-serif;
   font-weight: 100;
   font-size: 13px;
@@ -19,6 +18,7 @@
 
 .navicon a {
   text-decoration: none;
+  color: #000;
 }
 
 

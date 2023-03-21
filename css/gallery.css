@@ -172,6 +172,15 @@
 .swiper-horizontal.swiper-css.mode > swiper.wrapper{
     scroll-snap-type: initial;
 }
+
+
+.swiper-button-prev i.ri-arrow-left-line,
+.swiper-button-next i.ri-arrow-right-line {
+    color: rgba(117, 187, 194, 0.781); /* replace "red" with the desired color */
+    font-weight: 100; /* replace "bold" with the desired font weight */
+}
+
+  
   
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
@@ -196,6 +205,10 @@
 /* Active thumbnail */
 .swiper-slide-active .gallery__thumbnail{
     transform: translateY(-1.25rem) scale(1.2);
+}
+
+.gallery-cards{
+    width: 300px;
 }
 
 }
