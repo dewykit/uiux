@@ -15,8 +15,8 @@
   
 .gallery__card{
     position: relative;
-    width: 308px;
-    height: 462px;
+    width: 277.2px;
+    height: 415.8px;
     border-radius: 23px;
     margin-left: auto;
     margin-right: auto;
@@ -72,8 +72,8 @@
   
 .gallery__thumbnail{
     position: relative;
-    height: 60px;
-    width: 60px;
+    height: 55px;
+    width: 55px;
     border-radius: 20px;
     overflow: hidden;
     margin-left: auto;
@@ -125,10 +125,11 @@
   
 /* Sliding numbers */
 .swiper-pagination-fraction{
-    font-size: small;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
     letter-spacing: -1px;
     font-weight: 500;
-    color: black;
+    color: rgba(116, 159, 163, 0.781);
     bottom: 0;
 }
   
@@ -177,6 +178,7 @@
 .swiper-button-prev i.ri-arrow-left-line,
 .swiper-button-next i.ri-arrow-right-line {
     color: rgba(117, 187, 194, 0.781); /* replace "red" with the desired color */
+    font-size: 23px;
     font-weight: 100; /* replace "bold" with the desired font weight */
 }
 
@@ -186,8 +188,8 @@
 /* For small devices */
 @media only screen and (max-width: 800px) {
     .gallery__card{
-        width: 200px;
-        height: 300px;
+        width: 220px;
+        height: 330px;
     }
 
     .gallery-cards,
