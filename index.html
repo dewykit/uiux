@@ -297,12 +297,6 @@ function handleMediaQuery(mediaQuery) {
     swiper.params.spaceBetween = 10;
     swiper.params.centeredSlides = true;
     swiper.update(); // Update Swiper with new configuration
-  } else {
-    // Revert configuration back to default for larger screens
-    swiper.params.slidesPerView = 3;
-    swiper.params.spaceBetween = 20;
-    swiper.params.centeredSlides = false;
-    swiper.update(); // Update Swiper with new configuration
   }
 }
 
