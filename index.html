@@ -48,6 +48,8 @@
 </div>
 
 <section>
+
+  
 <div class="context">
   <div class="center-axis">
     <center>
@@ -79,7 +81,7 @@
       <br>
       <br>
 
-<!--       <div class="scroll-indicator"></div> -->
+       <div class="scroll-indicator"></div>
     </center>
   </div>
 </div>
@@ -115,106 +117,44 @@
     </center>
 
 
-  <div class="gallery">
-    <!-- =============== SWIPER GALLERY CARDS =============== -->
-    <div class="swiper gallery-cards">
+    <div class="container">
+
+      <div class="swiper">
+    
         <div class="swiper-wrapper">
-
+      
           <div class="swiper-slide">
-            <article class="gallery__card">
-              <a href="dewykit.html">
-                <img src="images/banner 3.jpg" class="gallery__img">
-              </a>
-              <div class="gallery__data">
-                <h3 class="gallery__title">Dewy Skincare</h3>
-                <span class="gallery__subtitle">E-commerce website</span>
-              </div>
-            </article>
+            <a href="dewykit.html">
+            <img src="images/banner 3.jpg" class="img-fluid rounded-3" />
+          </a>
+            <p>Dewy Skincare</p>
           </div>
-          
-
-        <div class="swiper-slide">
-          <article class="gallery__card">
-            <img src="images/smart-home-screen-panel-monitor-wall2.jpg" class="gallery__img">
-              <div class="gallery__data">
-                <h3 class="gallery__title">My Home</h3>
-              <span class="gallery__subtitle">UX Desgin</span>
-            </div>
-          </article>
+          <div class="swiper-slide">
+            <a href="my-home-assistant.html">
+            <img src="images/smart-home-screen-panel-monitor-wall2.jpg" class="img-fluid rounded-3" />
+          </a>
+            <p>My Home</p>
+          </div>
+          <div class="swiper-slide">
+            <a href="password.html">
+            <img src="images/05postcard - Copy.jpg" class="img-fluid rounded-3" />
+          </a>
+            <p>Henry's 8 Fondest Memories Postcards</p>
+          </div>
+          <div class="swiper-slide">
+            <a href="harbourside.html">
+            <img src="images/Harbourside-Precinct_hero2.jpg" class="img-fluid rounded-3" />
+          </a>
+            <p>Harbourside, Sydney</p>
+          </div>
+        
         </div>
-
-        <div class="swiper-slide">
-          <article class="gallery__card">
-            <img src="images/05postcard.jpg" class="gallery__img">
-            <div class="gallery__data">
-              <h3 class="gallery__title">Lover's studio</h3>
-              <span class="gallery__subtitle">Photoshop image</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="swiper-slide">
-          <article class="gallery__card">
-            <img src="images/Harbourside-Precinct_hero2.jpg" class="gallery__img">
-            <div class="gallery__data">
-              <h3 class="gallery__title">Harbourside, Sydney</h3>
-              <span class="gallery__subtitle">DA architectural planning</span>
-            </div>
-          </article>
-        </div>
-
+       
       </div>
-     </div>
-
-    <!-- =============== SWIPER GALLERY THUMBNAIL =============== -->
-    <div class="gallery__overflow">
-        <div class="swiper gallery-thumbs">
-          <div class="swiper-wrapper">
-      
-            <div class="swiper-slide">
-              <div class="gallery__thumbnail">
-                <img src="images/banner 3.jpg" class="gallery__thumbnail-img">
-              </div>
-            </div>
-      
-            <div class="swiper-slide">
-              <div class="gallery__thumbnail">
-                <img src="images/smart-home-screen-panel-monitor-wall2.jpg" class="gallery__thumbnail-img">
-              </div>
-            </div>
-      
-            <div class="swiper-slide">
-              <div class="gallery__thumbnail">
-                <img src="images/05postcard.jpg" class="gallery__thumbnail-img">
-              </div>
-            </div>
-      
-            <div class="swiper-slide">
-              <div class="gallery__thumbnail">
-                <img src="images/Harbourside-Precinct_hero2.jpg" class="gallery__thumbnail-img">
-              </div>
-            </div>
-          </div>
-
-        <!-- Swiper pagination -->
-          <div class="swiper-pagination"></div>
-          </div>
-
-        <!-- Swiper arrows -->
-        <div class="swiper-button-next">
-            <i class="ri-arrow-right-line"></i>
-        </div>
-        <div class="swiper-button-prev">
-            <i class="ri-arrow-left-line"></i>
-        </div>
+        
     </div>
-
-      </div>
-
-</div>
-
-
-</section>
+  </section>
+    <br clear="left">
 
 <div class="context">
   <div class="column">
@@ -325,40 +265,52 @@
       </div>
     </center>
   </div>
+</section>
 
 <script src="js/main.js"></script>
-<!-- <script src="js/gallery.js"></script> -->
 <script src="js/swiper-bundle.min.js"></script>
 
 <script>
 
-let swiperCards = new Swiper(".gallery-cards", {
-    loop: true,
-    loopedSlides: 5,
-    cssMode: true,
-    effect: 'fade',
-  });
-  
-  let swiperThumbs = new Swiper(".gallery-thumbs", {
-    loop: true,
-    loopedSlides: 4,
-    slidesPerView: 3,
-    centeredSlides: true,
-    slideToClickedSlide: true,
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
 
-    pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-    },
+	loop: true,
 
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      
-  });
-  
-  swiperThumbs.controller.control = swiperCards
+	// If we need pagination
+	pagination: {
+		el: '.swiper-pagination',
+	},
+	slidesPerView: 3,
+	spaceBetween: 20,
+	slidesPerView: 3.5,
+	centeredSlides: false,
+});
+
+// Add a media query listener to modify configuration for smaller screens
+const mediaQuery = window.matchMedia('(max-width: 800px)');
+
+function handleMediaQuery(mediaQuery) {
+  if (mediaQuery.matches) {
+    // Change configuration for smaller screens
+    swiper.params.slidesPerView = 1.5;
+    swiper.params.spaceBetween = 10;
+    swiper.params.centeredSlides = true;
+    swiper.update(); // Update Swiper with new configuration
+  } else {
+    // Revert configuration back to default for larger screens
+    swiper.params.slidesPerView = 3;
+    swiper.params.spaceBetween = 20;
+    swiper.params.centeredSlides = false;
+    swiper.update(); // Update Swiper with new configuration
+  }
+}
+
+// Call handleMediaQuery initially to set configuration based on initial screen size
+handleMediaQuery(mediaQuery);
+
+// Add event listener for changes in screen size
+mediaQuery.addListener(handleMediaQuery);
 
 </script>
 
