@@ -22,9 +22,9 @@
 
 <style>
 	 .image {
-        background-image: url('images/smart-home-screen-panel-monitor-wall2.jpg');
-        background-size: contain;
-		background-position: center center;
+        background-image: url('images/banner 1.jpg');
+        background-size: cover;
+		background-position: center;
 		background-attachment: fixed;
         width: 70vw;
         height: 60vh;
@@ -33,9 +33,15 @@
 		margin-bottom: 0%;
 		margin-left: 15%;
       }
+
+	  img {
+		max-width: 100%; /* Set the maximum width of the image to 100% of its parent */
+		height: auto; /* Ensure that the aspect ratio of the image is maintained */
+	}
+
 </style>
 
-<body>
+
 
 
 	<div class="container">
@@ -75,9 +81,10 @@
 
 		<br>
 		<br>
-		<!-- <button id="see-more-btn">Read more</button> -->
-		<br>
-		<br>
+
+	<div id="hidden-content">
+
+
 		<div id="hidden-content" style="display: none;">
 			
 			
@@ -326,13 +333,15 @@
 	•&emsp;Validate design decisions through iterations.
 	</p>
 
-<br>
-<br>
-<br>
-<br>
-<br>
+
 </div>
 </div>
+</div>
+
+<br clear="left">
+<center>
+<div class="see-more-button" onclick="toggleContent()">Read more</div>
+</center>
 
 
 <!-- Footer section
@@ -343,7 +352,22 @@
 
 <!-- Javascript 
 ================================================== -->
+<body>
 
+	<script>
+
+		function toggleContent() {
+			var content = document.getElementById("hidden-content");
+			var button = document.querySelector('.see-more-button');
+			if (content.style.display === "none") {
+				content.style.display = "block";
+				button.textContent = "Collapse";
+			} else {
+				content.style.display = "none";
+				button.textContent = "Read more";
+			}
+		}
+	</script>
 
 </body>
 </html>

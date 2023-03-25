@@ -32,13 +32,20 @@
 		margin-bottom: 0%;
 		margin-left: 15%;
       }
+
+	  img {
+		max-width: 100%; /* Set the maximum width of the image to 100% of its parent */
+		height: auto; /* Ensure that the aspect ratio of the image is maintained */
+	}
+
 </style>
 
 	
-		<div class="image">
-		</div>
+		<!-- <div class="image"></div> -->
+
 		
 		<div class="container">
+
 			<div class="column">
 				<p style="margin-bottom: 0;">Ecommerce</p>
 				<h5 style="margin-top: 0;">Dewy Skincare</h5>
@@ -70,9 +77,7 @@
 
 	<br>
 	<br>
-	<!-- <button id="see-more-btn">Read more</button> -->
-	<div id="hidden-content" style="display: none;">
-	
+	<div id="hidden-content">
 	<h6>Design Process</h6>
 	<br>
 	<img src="images/Design process part 1.svg" alt="Design process part 1">
@@ -309,8 +314,13 @@
 	</p>
 	</div>
 </div>
-
 </div>
+</div>
+
+<br clear="left">
+<center>
+<div class="see-more-button" onclick="toggleContent()">Read more</div>
+</center>
 
 <br clear="left">
 
@@ -330,7 +340,22 @@
 
 <!-- Javascript 
 ================================================== -->
+<body>
 
+	<script>
+
+		function toggleContent() {
+			var content = document.getElementById("hidden-content");
+			var button = document.querySelector('.see-more-button');
+			if (content.style.display === "none") {
+				content.style.display = "block";
+				button.textContent = "Collapse";
+			} else {
+				content.style.display = "none";
+				button.textContent = "Read more";
+			}
+		}
+	</script>
 
 </body>
 </html>
