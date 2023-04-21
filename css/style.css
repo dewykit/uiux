@@ -74,8 +74,8 @@ h3 {
 /* magic font */
 
 :root {  
-  --purple: #75a788;
-  --violet: #607191;
+  --purple: #86e3ce;
+  --violet: #ccabd8;
 }
 
 @keyframes background-pan {
