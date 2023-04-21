@@ -8,7 +8,7 @@
   justify-content: flex-end;
   font-family: 'Inter', sans-serif;
   font-weight: 100;
-  font-size: 13px;
+  font-size: 14px;
   max-width: 85%;
   margin: 0 auto;
   z-index: 999;
@@ -74,8 +74,8 @@ h3 {
 /* magic font */
 
 :root {  
-  --purple: #86e3ce;
-  --violet: #ccabd8;
+  --purple: #90b8be;
+  --violet: #dd9bb1;
 }
 
 @keyframes background-pan {
@@ -174,7 +174,7 @@ p {
   color: #000;
   font-family: 'Inter', sans-serif;
   font-weight: 100;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -221,6 +221,14 @@ html, body {
     width: 100%;
   }
 
+  .container {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  .nav-button {
+    display: none;
+  }
 }
 
 
@@ -343,6 +351,24 @@ html body [data-ca3_iconfont="ETmodules"]::before {
   cursor: pointer;
   font-family: 'Inter', sans-serif;
   font-weight: 100;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.5;
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  transition: box-shadow 0.9s ease, border 0.9s ease; /* add border transition */
+  margin-right: 20px;
+}
+
+.nav-button:hover {
+  box-shadow: 0 0 15px #c7c7c7;
+  border-color: #fff; /* change border color */
 }
