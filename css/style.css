@@ -192,8 +192,19 @@ mark {
 .column {
 	float: left; 
 	width: 45%;
-  margin-top: -2%;
 	margin-right: 5%;
+}
+
+.quater {
+  float: left;
+  width: 20%;
+  margin-right: 5%;
+}
+
+.fifth {
+  float: left;
+  width: 15%;
+  margin-right: 5%;
 }
 
 section {
@@ -218,6 +229,14 @@ html, body {
  }
 
   .column {
+    width: 100%;
+  }
+
+  .quater {
+    width: 100%;
+  }
+
+  .fifth {
     width: 100%;
   }
 
