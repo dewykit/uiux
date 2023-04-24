@@ -24,8 +24,8 @@
 
 .context {
   display: relative;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 6%;
+  margin-right: 6%;
 }
 
 body {
@@ -209,7 +209,6 @@ mark {
 
 section {
   min-height: 70vh;
-  width: 100vw;
   position: relative;
 }
 
